@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -41,7 +42,14 @@ class MainActivity : ComponentActivity() {
             TextCell("1")
             TextCell("2")
             TextCell("3")
+
+            Column(modifier) {
+                TextCell("1")
+                TextCell("2")
+                TextCell("3")
+            }
         }
+
     }
 
     @Preview(showBackground = true)
