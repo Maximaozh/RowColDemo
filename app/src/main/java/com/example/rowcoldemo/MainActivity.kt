@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -32,7 +33,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             RowColDemoTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                Scaffold(modifier = Modifier.fillMaxSize().height(1000.dp)) { innerPadding ->
                     MainScreen(Modifier.padding(innerPadding))
                 }
             }
@@ -55,11 +56,16 @@ class MainActivity : ComponentActivity() {
             verticalArrangement =  Arrangement.Bottom,
             horizontalAlignment = Alignment.End,
             modifier = modifier.width(250.dp).height(500.dp)) {
-            TextCell("1")
-            TextCell("2")
-            TextCell("3")
+//            TextCell("1")
+//            TextCell("2")
+//            TextCell("3")
         }
 
+        Row(modifier = modifier.height(250.dp).offset( y = 200.dp)) {
+            TextCell("1", Modifier.align(Alignment.Top))
+            TextCell("2", Modifier.align(Alignment.CenterVertically))
+            TextCell("3", Modifier.align(Alignment.Bottom))
+        }
     }
 
     @Preview(showBackground = true)
