@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.paddingFrom
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Scaffold
@@ -20,6 +21,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.FirstBaseline
 import androidx.compose.ui.layout.LastBaseline
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -69,18 +71,9 @@ class MainActivity : ComponentActivity() {
         }
 
         Row {
-            Text(
-                text = "Large Text\n\nMore Text",
-                Modifier.alignBy(LastBaseline),
-                fontSize = 40.sp,
-                fontWeight = FontWeight.Bold
-            )
-            Text(
-                text = "Small Text",
-                Modifier.alignByBaseline(),
-                fontSize = 32.sp,
-                fontWeight = FontWeight.Bold,
-            )
+            TextCell("1", Modifier.weight(weight = 0.2f, fill = true))
+            TextCell("2", Modifier.weight(weight = 0.4f, fill = true))
+            TextCell("3", Modifier.weight(weight = 0.3f, fill = true))
         }
     }
 
