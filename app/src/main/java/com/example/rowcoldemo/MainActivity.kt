@@ -5,7 +5,6 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.border
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -13,6 +12,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
@@ -38,26 +38,14 @@ class MainActivity : ComponentActivity() {
     @Composable
     fun MainScreen (modifier: Modifier = Modifier)
     {
-
-
-        Row(modifier) {
-            Column(modifier) {
-                TextCell("1")
-                TextCell("2")
-                TextCell("3")
-            }
-            Column(modifier) {
-                TextCell("4")
-                TextCell("5")
-                TextCell("6")
-            }
-            Column(modifier) {
-                TextCell("7")
-                TextCell("8")
-                TextCell("9")
-            }
-
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            modifier = modifier.size(width = 400.dp, height = 200.dp)) {
+            TextCell("1")
+            TextCell("2")
+            TextCell("3")
         }
+
     }
 
     @Preview(showBackground = true)
