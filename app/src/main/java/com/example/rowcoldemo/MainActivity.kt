@@ -66,6 +66,19 @@ class MainActivity : ComponentActivity() {
             TextCell("2", Modifier.align(Alignment.CenterVertically))
             TextCell("3", Modifier.align(Alignment.Bottom))
         }
+
+        Row {
+            Text(
+                text = "Large Text",
+                fontSize = 40.sp,
+                fontWeight = FontWeight.Bold
+            )
+            Text(
+                text = "Small Text",
+                fontSize = 32.sp,
+                fontWeight = FontWeight.Bold
+            )
+        }
     }
 
     @Preview(showBackground = true)
