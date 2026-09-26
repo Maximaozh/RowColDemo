@@ -38,18 +38,26 @@ class MainActivity : ComponentActivity() {
     @Composable
     fun MainScreen (modifier: Modifier = Modifier)
     {
-        Row(modifier) {
-            TextCell("1")
-            TextCell("2")
-            TextCell("3")
 
-            Column(modifier) {
+
+        Column(modifier) {
+            Row(modifier) {
                 TextCell("1")
                 TextCell("2")
                 TextCell("3")
             }
-        }
+            Row(modifier) {
+                TextCell("4")
+                TextCell("5")
+                TextCell("6")
+            }
+            Row(modifier) {
+                TextCell("7")
+                TextCell("8")
+                TextCell("9")
+            }
 
+        }
     }
 
     @Preview(showBackground = true)
