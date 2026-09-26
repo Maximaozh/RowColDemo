@@ -40,18 +40,18 @@ class MainActivity : ComponentActivity() {
     {
 
 
-        Column(modifier) {
-            Row(modifier) {
+        Row(modifier) {
+            Column(modifier) {
                 TextCell("1")
                 TextCell("2")
                 TextCell("3")
             }
-            Row(modifier) {
+            Column(modifier) {
                 TextCell("4")
                 TextCell("5")
                 TextCell("6")
             }
-            Row(modifier) {
+            Column(modifier) {
                 TextCell("7")
                 TextCell("8")
                 TextCell("9")
